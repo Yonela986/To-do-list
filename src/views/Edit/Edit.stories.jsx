@@ -1,10 +1,11 @@
 import Edit from './Edit';
-import Global from '../../components/Global/Global'
-import faker from 'faker'
+import faker from 'faker';
+import Global from '../../components/Global/Global';
+
 
 const config = {
     title: 'views/Edit',
-}
+};
 
 export default config;
 
@@ -26,4 +27,4 @@ const InitialValue = () =>
 export {
     Default,
     InitialValue
-}
+};

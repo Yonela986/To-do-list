@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "../Link/Link";
+import Global from "../Global/Global";
 
 const Header = styled.header`
   background: #1b4332;
   color: white;
   text-align: center;
   padding: 0.5rem;
+  width: 100%;
 `;
 const Title = styled.h1`
   font-family: "Times New Roman", Times, serif;
@@ -55,15 +57,19 @@ const Home = (props) => {
         <nav>
           <List>
             <LinkWrap>
+             <Global>
               <Link fullWidth disabled={activePage === "home"} url="#/">
                 Back to Home
               </Link>
+              </Global>
             </LinkWrap>
 
             <LinkWrap>
+            <Global>
               <Link fullWidth disabled={activePage === "add"} url="#/add">
                 Add New Item
               </Link>
+              </Global>
             </LinkWrap>
           </List>
         </nav>

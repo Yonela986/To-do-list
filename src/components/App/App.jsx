@@ -17,8 +17,9 @@ const EditWrapper = (props) => {
 
 
 const App = () => {
-  const [loaded, setLoaded] = useState(false);
   const [list, setList] = useState([]);
+  const [loaded, setLoaded] = useState(false);
+
 
   useEffect(
     () => {
@@ -48,6 +49,12 @@ const App = () => {
       window.location.replace("#/");
   };
 
+  const handleDeleteItem = (taskId) => {
+    const newList = list.filter((item) => item.id !== taskId);
+    setList(newList);
+    //window.location.replace("#/");
+  };
+
   const handleCheckToggle = (taskId) => {
     const newList = list.map((item) => {
       if (item.id !== taskId) return item;
@@ -60,11 +67,7 @@ const App = () => {
     setList(newList);
   };
 
-  const handleDeleteItem = (taskId) => {
-    const newList = list.filter((item) => item.id !== taskId);
-    setList(newList);
-    //window.location.replace("#/");
-  };
+
 
   const handleEditItem = (taskId, name) => {
     const newList = list.map((item) => {
