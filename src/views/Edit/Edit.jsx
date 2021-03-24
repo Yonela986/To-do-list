@@ -19,7 +19,7 @@ const StyledButton = styled(Button)`
 `
 const Edit = (propos) => {
     const { onSave, initialName, taskId } = propos;
-    const { taskId } = useParams();
+  //  const { taskId } = useParams();
 
     const [name, setName] = useState(initialName || "");
 
