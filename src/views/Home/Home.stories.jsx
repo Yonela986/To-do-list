@@ -17,7 +17,7 @@ const MOCK_LIST = new Array(20).fill(null).map(() => ({
 
 const Default = () => 
 <Global>
-    <Home list={MOCK_LIST} onDeleteItem={console.log()}/>
+    <Home list={MOCK_LIST} onDeleteItem={console.log("onDeleteItem")}/>
  </Global>
 
 export {
